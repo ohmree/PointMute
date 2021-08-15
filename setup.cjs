@@ -1,7 +1,8 @@
 const readline = require('readline');
-const config = require('./config.json')
 const fs = require('fs');
+const process = require('process');
 const OBSWebSocket = require('obs-websocket-js');
+const config = require('./config.json');
 
 const obs = new OBSWebSocket();
 const rl = readline.createInterface({
@@ -13,7 +14,7 @@ const buffer = {};
 
 obs
   .connect({
-    address: 'localhost:4444',
+    address: 'localhost:4444'
   })
   .then(() => obs.send('GetSpecialSources'))
   .then(async (data) => {
