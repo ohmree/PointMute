@@ -4,7 +4,9 @@
   "description": "",
   "main": "main.cjs",
   "scripts": {
-    "start": "node main.cjs"
+    "start": "node main.cjs",
+    "lint": "xo",
+    "fix": "xo --fix"
   },
   "author": "",
   "license": "ISC",

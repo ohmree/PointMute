@@ -14,7 +14,7 @@ const buffer = {};
 
 obs
   .connect({
-    address: 'localhost:4444'
+    address: 'localhost:4444',
   })
   .then(() => obs.send('GetSpecialSources'))
   .then(async (data) => {
